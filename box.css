@@ -1,0 +1,66 @@
+/* [THUMBNAILS] */
+
+#speriod {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 2vw;
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  box-sizing: border-box;
+  width: 25%;
+  max-height: 150px;
+  padding: 5px;
+  /* fill, contain, cover, scale-down : use whichever you like */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* [RESPONSIVE - MOBILE FRIENDLY] */
+@media screen and (max-width: 850px) {
+  .gallery img { width: 33%; }
+}
+@media screen and (max-width: 640px) {
+  .gallery img { width: 50%; }
+}
+
+/* [LIGHTBOX BACKGROUND] */
+#lback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.5s;
+}
+#lback.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* [LIGHTBOX IMAGE] */
+#lfront {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#lfront img {
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+/* [DOES NOT MATTER] */
+body, html {
+  padding: 0;
+  margin: 0;
+}
